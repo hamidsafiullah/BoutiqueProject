@@ -1,0 +1,141 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script>
+    $(document).ready(function () {
+        $('.carousel').carousel();
+    });
+</script>
+
+<style>
+    .carousel-item img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    .destination-card {
+        /*max-width: 400px;*/
+        margin-bottom: 20px;
+    }
+
+        .destination-card img {
+            max-width: 100%;
+            height: auto;
+        }
+</style>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/images/home-1.jpg" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/home-2.jpg" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/home-3.jpg" alt="Image 3">
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<main>
+    <br />
+
+
+    <div class="container">
+        <hr />
+
+        <h3 class="float-center" style="text-align: center;">Shop By Collection</h3>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card destination-card">
+                    <a href="@Url.Action("Collections", "Home")">
+                        <img src="~/images/Collection-1.jpg" class="img" alt="Collection 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Collection 1</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card destination-card">
+                    <a href="@Url.Action("Collections", "Home")">
+                        <img src="~/images/Collection-2.jpg" alt="Collection 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Collection 2</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card destination-card">
+                    <a href="@Url.Action("Collections", "Home")">
+                        <img src="~/images/Collection-3.jpg" alt="Collection 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Collection 3</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Add more destination cards here -->
+
+        </div>
+    </div>
+
+    <br />
+
+    <div class="container">
+        <hr />
+
+        <h3 class="float-center" style="text-align: center;">Styles and Accessories</h3>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card destination-card">
+                    <a href="@Url.Action("Styles", "Home")">
+                        <img src="~/images/style-mode.jpg" class="img" alt="Styles">
+                        <div class="card-body">
+                            <h5 class="card-title">Styles</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card destination-card">
+                    <a href="@Url.Action("Accessories", "Home")">
+                        <img src="~/images/acc3.jpg" alt="Accessories">
+                        <div class="card-body">
+                            <h5 class="card-title">Accessories</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Add more destination cards here -->
+
+        </div>
+    </div>
+    <hr />
+
+</main>
